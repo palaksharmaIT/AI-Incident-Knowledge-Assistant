@@ -43,3 +43,6 @@ vectorstore/faiss_index/
 
 # Hugging Face / Sentence Transformers cache
 .cache/
+
+# SQLite database
+data/*.db
