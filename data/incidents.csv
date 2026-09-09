@@ -1,0 +1,21 @@
+incident_id,title,description,root_cause,resolution,severity,service,category
+INC001,Payment API 500 Errors,Payment requests started returning HTTP 500 errors after a deployment,Database connection pool was exhausted,Increased connection pool size and restarted the service,High,Payment API,Database
+INC002,Slow Database Queries,Application database queries became extremely slow during peak traffic,Missing indexes on frequently queried columns,Added indexes and optimized slow queries,Medium,Database,Database
+INC003,Authentication Failure,Users were unable to log in after a new application release,Incorrect authentication environment variables,Corrected environment variables and redeployed,High,Auth Service,Authentication
+INC004,API Timeout,Customer API requests were timing out intermittently,Database queries were taking too long,Optimized queries and increased API timeout temporarily,High,Customer API,API
+INC005,Deployment Failure,Production deployment failed during dependency installation,Incompatible package version,Updated dependency versions and rebuilt the deployment,Medium,Deployment Service,Deployment
+INC006,Memory Usage High,Application memory usage continuously increased over several hours,Memory leak in background processing task,Fixed object cleanup and restarted workers,High,Worker Service,Infrastructure
+INC007,Database Connection Error,Application could not connect to the production database,Incorrect database credentials,Updated database credentials in environment configuration,Critical,Database,Database
+INC008,Login API Error,Login endpoint returned errors for many users,Expired authentication configuration,Updated authentication configuration and restarted API,High,Auth Service,Authentication
+INC009,Server CPU High,Server CPU reached very high utilization after traffic increased,Unoptimized background processing job,Optimized the processing job and distributed workload,Medium,Worker Service,Infrastructure
+INC010,Order API Failure,Order creation failed with server errors after deployment,Incorrect database migration,Applied missing migration and restarted the API,High,Order API,Deployment
+INC011,Payment Timeout,Payment requests were taking more than thirty seconds,Slow database transaction during payment processing,Optimized transaction and database query,High,Payment API,Database
+INC012,API Authentication Error,API requests were rejected after deployment,Invalid API authentication configuration,Corrected API configuration and redeployed,High,API Gateway,Authentication
+INC013,Service Unavailable,Application returned 503 errors during deployment,Application instances were not started correctly,Fixed deployment configuration and restarted instances,Critical,API Gateway,Deployment
+INC014,Database Disk Full,Database stopped accepting new records,Database storage reached capacity,Cleaned old logs and increased storage capacity,Critical,Database,Infrastructure
+INC015,Background Job Failure,Scheduled background jobs stopped running,Worker process crashed because of an unhandled exception,Fixed exception handling and restarted workers,Medium,Worker Service,Infrastructure
+INC016,Product API Slow,Product API response time increased significantly,Expensive database query was executed for every request,Optimized query and added caching,Medium,Product API,API
+INC017,User Registration Failure,New users could not register successfully,Database validation error was introduced during deployment,Fixed validation logic and redeployed,High,User Service,Deployment
+INC018,Database Deadlock,Several transactions failed because of database deadlocks,Multiple transactions were updating the same records,Changed transaction order and optimized locking,High,Database,Database
+INC019,Token Expiration Issue,Users were logged out unexpectedly after application update,Incorrect token expiration configuration,Corrected token expiration settings,Medium,Auth Service,Authentication
+INC020,API Rate Limit Error,Legitimate API requests were rejected unexpectedly,Rate limit configuration was too restrictive,Adjusted rate limit configuration,Medium,API Gateway,API
